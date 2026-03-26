@@ -7,6 +7,8 @@ async function startBot() {
 
   const sock = makeWASocket({
     auth: state,
+    version: [2, 3000, 1033893291],
+    browser: ["Ubuntu", "Chrome", "22.04.4"],
   })
 
   sock.ev.on("connection.update", ({ connection, lastDisconnect, qr }) => {
